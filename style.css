@@ -1,0 +1,142 @@
+* {
+  outline: none;
+}
+
+.form-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.reg-form {
+  background: rgb(231, 121, 189);
+  box-sizing: border-box;
+  box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4);
+  font-family: 'Fredoka One', cursive;
+  margin: 15px auto;
+  padding: 15px;
+  width: 800px;
+  border-radius: 10px;
+ 
+}
+
+.helper-text {
+  font-size: 119px;
+  margin-botom: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.field-row {
+  position: relative;
+  width: 100%;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px 5px 0;
+  text-align: right;
+  width: 100px;
+  
+  color: rgb(95, 5, 28);
+  font-family: 'Fredoka One', cursive;
+}
+
+.field {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 240px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: darkred
+}
+.field.field-short {
+  width: 70px;
+}
+
+.message {
+  display: inline-block;
+}
+
+.form-button {
+  background: linear-gradient(180deg, #f3efef, #ebb4d8);
+  border: none;
+  color: mediumvioletred;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  text-shadow: navy;
+}
+.form-button1 {
+  background: linear-gradient(180deg, #f3efef, #ebb4d8);
+  border: none;
+  color: mediumvioletred;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  text-shadow: rgb(112, 7, 21);
+}
+:required + .message::before {
+  content: "* ";
+}
+
+.text-field:focus:required:valid {
+  outline: rgb(238, 235, 235) solid 2px;
+}
+.text-field:focus:required:invalid {
+  outline: rgb(247, 242, 245) solid 2px;
+}
+
+.date-field {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.date-field:focus:in-range {
+  outline: rgb(255, 253, 254) solid 2px;
+}
+.date-field:focus:out-of-range {
+  outline: rgb(250, 249, 250) solid 2px;
+}
+
+.website-field:focus:valid {
+  outline: rgb(249, 252, 249) solid 2px;
+}
+.website-field:focus:invalid {
+  outline: rgb(243, 243, 243) solid 2px;
+}
+
+.first-name-field:focus:invalid + .message::after {
+  color: rgb(255, 252, 246);
+  content: "THIS FIELD CANNOT BE EMPTY";
+  font-weight: bold;
+}
+
+.last-name-field:focus:invalid + .message::after {
+  color: rgb(252, 250, 246);
+  content: "THIS FIELD CANNOT BE EMPTY";
+  font-weight: bold;
+}
+
+.dob-field:focus:out-of-range + .message::after {
+  color: rgb(250, 249, 249);
+  content: "THIS FIELD CANNOT BE EMPTY";
+  font-weight: bold;
+}
+
+.hs-field:focus:invalid + .message::after {
+  color: rgb(255, 255, 255);
+  content: "THIS FIELD CANNOT BE EMPTY";
+  font-weight: bold;
+}
+.form-button:focus:valid + .message::after {
+  color: rgb(255, 255, 255);
+  content: "ALL INPUT DATA ARE GOOD";
+  font-weight: bold;
+}
